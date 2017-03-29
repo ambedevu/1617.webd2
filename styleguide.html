@@ -44,20 +44,57 @@
     <!-- Stylesheets: Vendors -->
     <link rel="stylesheet" media="all" href="vendor/normalize/normalize.css">
     <!-- Stylesheets: App -->
+    <link rel="stylesheet" media="all" href="css/reset.css">
     <link rel="stylesheet" media="all" href="css/fonts.css">
     <link rel="stylesheet" media="all" href="css/typography.css">
+    <link rel="stylesheet" media="all" href="css/grid.css">
+    <link rel="stylesheet" media="all" href="css/card.css">
     <link rel="stylesheet" media="all" href="css/styleguide.css">
     <!-- Modernizr: feature detection -->
     <script src="vendor/modernizr/modernizr.min.js"></script>
 </head>
   </head>
   <body>
-    <div class="intro">
-      <h1>Styleguide</h1>
+    <div class="sf-grid__container">
+      <div class="sf-grid__row">
+        <div class="sf-grid__column-12">
+          <h1>Styleguide</h1>
+        </div>
+      </div>
+    </div>
+    <div class="sf-grid__container">
+      <div class="sf-grid__row">
+        <div class="sf-grid__column-12">
+          <h2>Typography</h2>
+        </div>
+      </div>
+      <div class="sf-grid__row">
+        <div class="sf-grid__column-12">
+          <div class="card">
+            <h3>Headings</h3>
+            <h1>The quick, brown fox (2.6rem)</h1>
+            <h2>The quick, brown fox (2.2rem)</h2>
+            <h3>The quick, brown fox (1.8rem)</h3>
+            <h4>The quick, brown fox (1.4rem)</h4>
+            <h5>The quick, brown fox (1.2rem)</h5>
+            <h6>The quick, brown fox (1.0rem)</h6>
+          </div>
+        </div>
+      </div>
+      <div class="sf-grid__row">
+        <div class="sf-grid__column-12">
+          <div class="card">
+            <h3>Text</h3>
+            <p>We achieve styling through opt in classes and do not style elements globally. This is to reduced the number of style collisions across projects. Elements can inherit styles from .copy--body or otherwise applied directly.</p>
+            <p>Typographic elements do not come with any margins attached to them in order to make them more flexible in where they can be used.</p>
+            <p>They get margins when they are inside a wrapper with a class of context--content. We may need to work on the naming but the principle is solid.</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Scripts: Vendors -->
       <!-- For example: jQuery, lodash, handlebars, ... -->
     <!-- Scripts: App -->
-    <script src="js/main.js"></script>
+    
   </body>
 </html>
