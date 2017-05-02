@@ -51,6 +51,7 @@ nav ul a{
     border-bottom: 1px solid rgb(169,169,169);
 }
 
+
 /*logo*/
 #logo{
     font-family: Play;
@@ -62,6 +63,12 @@ nav ul a{
     padding: 12px 40px;
     text-decoration: none;
 }
+
+.clearfix { 
+    display: block;
+    clear: both;
+ }
+
 /* CSS Document */
 
 * {
@@ -128,11 +135,11 @@ h2{
 .iconen{
     height: 60px;
 }
-.iconen_media>img{
+.iconen_hover{
     border: 4px solid rgb(169,169,169);
 }
 .iconen_hover:hover{
-    border: 10px solid rgb(169,169,169);
+    border: 3px solid rgb(128,128,128);
 }
 .header{
     font-family: 'Playfair Display', serif;
@@ -147,26 +154,30 @@ h2{
     border: .25rem solid #FFF;
     box-shadow: 0 0 1px #000;
     margin: 10px;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 6rem;
+    width: 6rem;
 
 }
 .colours__colour--a {
-    background-color: rgb(128,128,128);
+    background-color: rgb(0,0,0);
 }
 .colours__colour--b {
-    background-color: rgb(169,169,169);
-    float: left; 
+    background-color: rgb(135,201,191);
+    
 }
 .colours__colour--c {
-    background-color: rgb(135,201,191);
+    background-color: rgb(256,256,256);
+}
+.colours__colour--b 
+.colours__colour--c {
     float: left;
+    clear: left;
 }
 .colours__colour--d {
-    background-color: white;
+    background-color: rgb(169,169,169);
 }
-.colours__colour--f {
-    background-color: black;
+.colours__colour--e {
+    background-color: rgb(128,128,128);
 }
 
 /* Kolommen verplaatsen
