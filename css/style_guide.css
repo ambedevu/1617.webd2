@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*CSS nav*/
+nav ul{
+    list-style: none;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding:0;
+}
+nav ul a{
+    text-decoration: none;
+    
+}
+/*algemeen alle nav*/
+#main-navigation>ul>li {
+    float: right;
+    display: block;
+}
+#main-navigation>ul>li>a{
+    display: block;
+    background-color: white;
+    padding: 12px 40px;
+    color: rgb(135,201,191);
+    border-right: 2px solid rgb(128,128,128);
+    font-family: 'Play', sans-serif;
+    font-weight: bold;
+}
+
+#main-navigation>ul>li>a:hover{
+    background-color: rgb(169,169,169);
+    color: white 
+} /* normaal rgba gebruiken, a gaat tot 1, maakt transparant */
+
+
+/*enkel zichtbaar bij over gaan*/
+#main-navigation li.hasSubMenu > ul{
+    display: none;
+    border-left: 1px solid black;
+}
+#main-navigation li.hasSubMenu:hover > ul{
+    display: block;
+    color: rgb(169,169,169);
+} 
+#main-navigation .hasSubMenu li a{
+    background-color: white;
+    color: rgb(135,201,191);
+    display:block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-family: play;
+    border-bottom: 1px solid rgb(169,169,169);
+}
+
+/*logo*/
+#logo{
+    font-family: Play;
+    color: black;
+    font-size: 32px; 
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding: 12px 40px;
+    text-decoration: none;
+}
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+ }
+
+.grid__wrapper {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.grid__container {
+    display: block;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.grid__row {
+    display: block;
+    margin: 0 -12px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.grid__wrapper:after,
+.grid__container:after,
+.grid__row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Definitie voor de kolommen
+--------------------------------------- */
+
+.grid__column-3 {  
+    width: 25%; 
+    position: relative;
+    float: left;
+    padding: 0 12px;
+}
+.grid__column-6 {  
+    width: 50%; 
+    position: relative;
+    float: right;
+    padding: 0 12px;
+}
+/*TEKST*/
+body{
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+h2{
+    font-family: 'Play', sans-serif;
+    font-size: 24px;
+}
+/*ICONEN*/
+.iconen{
+    height: 60px;
+}
+.iconen_media>img{
+    border: 4px solid rgb(169,169,169);
+}
+.iconen_hover:hover{
+    border: 10px solid rgb(169,169,169);
+}
+.header{
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+.content{
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+}
+/*KLEUREN*/
+.colours__colour {
+    border: .25rem solid #FFF;
+    box-shadow: 0 0 1px #000;
+    margin: 10px;
+    height: 3.5rem;
+    width: 3.5rem;
+
+}
+.colours__colour--a {
+    background-color: rgb(128,128,128);
+}
+.colours__colour--b {
+    background-color: rgb(169,169,169);
+    float: left; 
+}
+.colours__colour--c {
+    background-color: rgb(135,201,191);
+    float: left;
+}
+.colours__colour--d {
+    background-color: white;
+}
+.colours__colour--f {
+    background-color: black;
+}
+
+/* Kolommen verplaatsen
+------------------------------------- */
+.grid__offset-12 { margin-left: 100%; }
+.grid__offset-11 { margin-left: 91.666666666667%; }
+.grid__offset-10 { margin-left: 83.333333333333%; }
+.grid__offset-9 {  margin-left: 75%; }
+.grid__offset-8 {  margin-left: 66.666666666667%; }
+.grid__offset-7 {  margin-left: 58.333333333333%; }
+.grid__offset-6 {  margin-left: 50%; }
+.grid__offset-5 {  margin-left: 41.666666666667%; }
+.grid__offset-4 {  margin-left: 33.333333333333%; }
+.grid__offset-3 {  margin-left: 25%; }
+.grid__offset-2 {  margin-left: 16.666666666667%; }
+.grid__offset-1 {  margin-left: 8.333333333333%; }
+
+
+/* Kolommen als test zichtbaar maken
+------------------------------------- */
+
+.grid__development .grid__wrapper {
+    background: rgba(255, 0, 0, 0.4);
+}
+.grid__development .grid__container {
+    background: rgba(0, 255, 0, 0.4);
+}
+.grid__development .grid__row {
+    background: rgba(0, 0, 255, 0.4);
+}
+.grid__development *[class*="grid__column-"] {
+    background: rgba(255, 255, 0, 0.4);
+    height: 64px;
+    margin-bottom: 12px;
+    
+    text-align: center;
+    line-height: 64px;
+}
+.grid__development *[class*="grid__column-"] > * {
+    background: rgba(255, 0, 255, 0.4);
+}
+
