@@ -10,6 +10,7 @@ nav ul a{
     text-decoration: none;
     
 }
+
 /*algemeen alle nav*/
 #main-navigation>ul>li {
     float: right;
@@ -26,17 +27,22 @@ nav ul a{
 }
 
 #main-navigation>ul>li>a:hover{
+    transition: .6s background-color;
     background-color: rgb(169,169,169);
     color: white 
 } /* normaal rgba gebruiken, a gaat tot 1, maakt transparant */
 
 
 /*enkel zichtbaar bij over gaan*/
+
 #main-navigation li.hasSubMenu > ul{
     display: none;
     border-left: 1px solid black;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    transition: 4s;
 }
-#main-navigation li.hasSubMenu:hover > ul{
+#main-navigation li.hasSubMenu:hover >ul{
     display: block;
     color: rgb(169,169,169);
 } 
@@ -50,13 +56,17 @@ nav ul a{
     font-family: play;
     border-bottom: 1px solid rgb(169,169,169);
 }
-
+#main-navigation .hasSubMenu li a:hover{
+    display: block;
+    transition: .8s;
+    color: rgb(128,128,128);
+}
 
 /*logo*/
 #logo{
     font-family: Play;
     color: black;
-    font-size: 32px; 
+    font-size: 40px; 
     float: left;
     margin-top: 40px;
     margin-bottom: 60px;
@@ -122,14 +132,19 @@ nav ul a{
 body{
     font-family: 'Play', sans-serif;
     font-size: 16px;
+    line-height: 1.4em;
 }
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
+    line-height: 1.8em;
 }
 h2{
     font-family: 'Play', sans-serif;
     font-size: 24px;
+    padding-bottom:16px;
+    border-bottom: 1px solid rgb(128,128,128);
+    
 }
 /*ICONEN*/
 .iconen{
@@ -139,15 +154,85 @@ h2{
     border: 4px solid rgb(169,169,169);
 }
 .iconen_hover:hover{
-    border: 3px solid rgb(128,128,128);
+    border: 2px solid rgb(128,128,128);
 }
-.header{
+/*FORMULIEREN*/
+.forms{
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: rgb(128,128,128);
+    border: none;	
+    border-bottom: 2px dashed rgb(128,128,128);
+    border-width: 100%;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.forms:hover{
+    border: none;	
+    border-bottom: 2px dashed rgb(169,169,169);
+}
+.form_border{
+    border: 4px solid rgb(135,201,191);
+    padding: 8px 16px 16px 16px;
+}
+.button{
+    display: block;
+    margin: auto;
+    width: 8em;
+    padding: 16px;
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(0,0,0);
+    background-color: rgb(256,256,256);
+    border: 2px solid rgb(0,0,0);
+}
+.button:hover{
+    font-family: 'Play', sans-serif;
+    font-weight: bold;
+    color: rgb(128,128,128);
+    border: 2px solid rgb(169,169,169);
+    transition: .4s;
+}
+.button_back{
+    display: block;
+    width:220px;
+    height: 80px;
+    margin: auto;
+    background-color: rgb(135,201,191);
+}
+/*TYPOGRAFIE*/
+.title{
     font-family: 'Playfair Display', serif;
     font-size: 32px;
+    line-height: 1.6em;
+}
+.subtitle{
+    font-family: 'Play', sans-serif;
+    font-size: 24px;
+    line-height: 1.4em;
 }
 .content{
     font-family: 'Play', sans-serif;
     font-size: 16px;
+    line-height: 1.4em;
+}
+.labels{
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+}
+.accents_serif{
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    line-height: 1.4em;
+}
+.accents_sans_serif{
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4em;
 }
 /*KLEUREN*/
 .colours__colour {
@@ -156,10 +241,13 @@ h2{
     margin: 10px;
     height: 6rem;
     width: 6rem;
+    padding-left: 4px;
 
 }
 .colours__colour--a {
     background-color: rgb(0,0,0);
+    color: rgb(256,256,256);
+    
 }
 .colours__colour--b {
     background-color: rgb(135,201,191);
@@ -179,7 +267,142 @@ h2{
 .colours__colour--e {
     background-color: rgb(128,128,128);
 }
+/*PORTFOLIO ITEMS*/
+/*try w3*/
+.container {
+    position: relative;
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
 
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90%;
+    width: 90%;
+    margin:auto;
+    opacity: 0;
+    transition: .5s ease;
+   
+}
+.vos{
+    background-color: rgb(255,165,0);
+}
+/*overlay ecostore*/
+.ecostore{
+    background-color: rgb(149,193,31);
+}
+/*overlay beertje*/
+.beertje{
+    background-color:rgb(210,180,140);
+}
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+/*FOOTER*/
+.footer-wrapper{
+    background-color: rgb(135,201,191);
+    border-top: 32px solid rgb(256,256,256);
+    color: rgb(256,256,256);
+    text-decoration: none;
+}
+.footer ul{
+    list-style-type: none;
+}
+.footer a{
+    color: rgb(256,256,256);
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer a:hover{
+    color: rgb(220,220,220);
+    transition: .4s;
+}
+.maps{
+    display:block;
+    text-align: right;
+}
+.footer img.iconen_hover{
+    float: right;
+    margin: 5px;
+}
+.social_media{
+    clear: right;
+}
+/*FOOTER END*/
+
+/*SITEMAP*/
+.sitemap{
+    display: block;
+    margin: auto;
+    height: 110px;
+    font-family: 'Play', sans-serif;
+    font-size: 24px; 
+    text-decoration: none;
+    color: rgb(128,128,128);
+    border: 3px solid rgb(135,201,191);
+    padding: 24px 16px 24px 16px;
+}
+.sitemap:hover{
+    color: rgb(135,201,191);
+    transition: .4s;
+}
+.line{
+    margin: 16px;
+    border-bottom: 2px solid rgb(128,128,128);
+    border-width: 80%;
+}
+
+/*PRIVACY POLICY*/
+.pp_hover{
+    text-decoration: none;
+    color: rgb(0,0,0);
+}
+.pp_hover:hover{
+    transition: .4s;
+    color: rgb(135,201,191);
+}
+
+/*CONTACT*/
+.contact{
+    background-color: rgb(135,201,191);
+    
+    color: rgb(256,256,256);
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 0px 16px 0px;
+}
+.contact_maps{
+    color: rgb(256,256,256);
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact_maps:hover{
+    color: rgb(220,220,220);
+    transition: .4s;
+}
+
+/*margin: top right bottom left*/
 /* Kolommen verplaatsen
 ------------------------------------- */
 .grid__offset-12 { margin-left: 100%; }
