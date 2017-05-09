@@ -180,6 +180,7 @@ h2{
 .button{
     display: block;
     margin: auto;
+    text-align: center;
     width: 8em;
     padding: 16px;
     font-family: 'Play', sans-serif;
@@ -201,6 +202,7 @@ h2{
     width:220px;
     height: 80px;
     margin: auto;
+    padding: 10px 0;
     background-color: rgb(135,201,191);
 }
 /*TYPOGRAFIE*/
@@ -475,6 +477,19 @@ h2{
     margin: auto;
     font-size: 24px;
     text-align: center;
+}
+.text_home{
+    background-color: rgb(135,201,191);
+    color: rgb(256,256,256);
+    margin: 54px 24px;
+    padding: 40px 16px;
+}
+.text_home h2{
+    border-bottom: none;
+}
+.text_home p{
+    font-size: 24px;
+    line-height: 1.4em;
 }
 /*margin: top right bottom left*/
 /* Kolommen verplaatsen
