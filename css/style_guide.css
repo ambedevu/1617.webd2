@@ -45,6 +45,7 @@ nav ul a{
 #main-navigation li.hasSubMenu:hover >ul{
     display: block;
     color: rgb(169,169,169);
+    z-index:55;
 } 
 #main-navigation .hasSubMenu li a{
     background-color: white;
@@ -388,10 +389,9 @@ h2{
 /*CONTACT*/
 .contact{
     background-color: rgb(135,201,191);
-    
     color: rgb(256,256,256);
     text-decoration: none;
-    padding: 5px 10px 5px 10px;
+    padding: 2px 10px 1px 10px;
     margin: 0px 0px 16px 0px;
 }
 .contact_maps{
@@ -403,7 +403,10 @@ h2{
     color: rgb(220,220,220);
     transition: .4s;
 }
-
+.google_maps{
+    padding: 24px 0px;
+    
+}
 /*ABOUT*/
 .team{
     background-color: hsla(171, 37.9%, 65.9%, 0.6);
@@ -491,6 +494,18 @@ h2{
     font-size: 24px;
     line-height: 1.4em;
 }
+
+/*PORTFOLIO ITEM*/
+.item{
+    margin: 12px 16px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.text_item{
+    margin: 32px;
+}
+
 /*margin: top right bottom left*/
 /* Kolommen verplaatsen
 ------------------------------------- */
