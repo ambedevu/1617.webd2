@@ -357,7 +357,7 @@ h2{
 /*SITEMAP*/
 .sitemap{
     display: block;
-    margin: auto;
+    text-align: center;
     height: 110px;
     font-family: 'Play', sans-serif;
     font-size: 24px; 
