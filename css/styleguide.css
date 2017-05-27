@@ -42,11 +42,11 @@ nav{
     margin-top: 0px;
     margin-bottom: 40px;
     transition: 4s;
+    z-index:55;
 }
 #main-navigation li.hasSubMenu:hover >ul{
     display: block;
     color: rgb(169,169,169);
-    z-index:55;
 } 
 #main-navigation .hasSubMenu li a{
     background-color: white;
